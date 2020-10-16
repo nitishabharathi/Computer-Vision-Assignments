@@ -6,7 +6,7 @@ def histogram_stretch(img):
     stretch_img = ((img-img.min(axis=0))/(img.max(axis=0)-img.min(axis=0)))*255
     return stretch_img
     
-img = cv2.imread('../input/cv-assignment-images/lung.jpg',0)
+img = cv2.imread('../data/lung.jpg',0)
 stretch_img = histogram_stretch(img)
 before_hist = np.ravel(img)
 after_hist = np.ravel(stretch_img)
